@@ -1,0 +1,36 @@
+obj = pd.DataFrame(np.arange(8).reshape((2,4)),index=[2,1],columns=['d','a','b','c'])
+print(obj)
+print(obj.sort_index(axis = 0))
+print(obj.sort_index(axis = 1))
+print(obj.sort_values)
+
+df1 = pd.DataFrame({"a":[1,2,3],"b":[4,5,6]})
+df2 = pd.DataFrame({"a":[7,8,9],"b":[10,11,12]})
+print(df1)
+print(df2)
+res = np.concat([df1,df2])
+print(res)
+app = df1.append(df2, ignore_index=True)
+print(app)
+
+df1 = pd.DataFrame({"key":['A','B','C','D','E'],'value_df1':[1,2,3,4,5]})
+df2 = pd.DataFrame({"key":['A','B','C','A','B'],'value_df1':['X','Y','Z','W','X']})
+print(pd.merge(df1,df2,on="key",how="left"))
+
+data1 = pd.DataFrame({"key":['K0','K1','K2','K3'],
+        'key1':['K0','K1','K0','K1'],
+        'Name':['Jai',"prin",'Gaurav','Anuj'],
+        'Age':[27,24,22,32]})
+data2 = pd.DataFrame({"key":['K0','K1','K2','K3'],
+        'key1':['K0','K0','K0','K0'],
+        "Adress":["Mu","hu",'Ou',"ju"],
+        "Qualification":["Btech",'BA','Bcom','llb']})
+print(pd.merge(data1,data2,on=['key','key1'],how="outer"))
+
+A = pd.DataFrame({"b":[4,8,2],"a":[6,2,8]})
+B = pd.DataFrame({"b":[9,7,8],"a":[12,5,2]})
+print(A.sort_index(axis = 0))
+print(A.sort_index(axis = 1))
+print(A)
+print(A.sort_values(by=="a"))
+
