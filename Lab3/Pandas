@@ -1,0 +1,50 @@
+a = pd.Series([1,2,3,4,5],index=['a','b','c','d','e'])
+print(a)
+print("1)", a['a'])
+print("2)", a[['a','b','c']])
+
+e = {1:'a',2:'b'}
+f = pd.Series(e,index=['gat1','gat2'])
+f['a']=2
+print(f)
+
+A =pd.Series([10,20,30,40,50])
+print(A[A>20])
+print(A*2)
+
+A = pd.DataFrame([[10,20],['a','b']])
+print(A)
+
+A ={'a':1,'b':2,'c':3}
+V ={'a':4,'b':5,'c':6}
+B = pd.DataFrame([A,V])
+print(B)
+
+a = {'one':pd.Series([10,20,30],index = ['a','b','c']), 'two':pd.Series([40,50,60],index = ['a','b','c'])}
+print(pd.DataFrame(a))
+
+A = pd.DataFrame({"Names":["Ana","Leo","Nea"],"Maths":[67,87,66], "Science":[89,78,98],"C-Prog":[45,87,67]},index=["O","A","A+"])
+print(A)
+print("Loc\n",A.loc["O"])
+print("\t")
+print("ILoc\n",A.iloc[1])
+
+obj = pd.DataFrame(np.arange(8).reshape((2,4)),index=[2,1],columns=['d','a','b','c'])
+print(obj)
+print(obj.sort_index(axis = 0))
+print(obj.sort_index(axis = 1))
+print(obj.sort_values)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
